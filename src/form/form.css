@@ -1,0 +1,141 @@
+/* Wrapper to fill the page */
+.form-wrapper {
+    position: relative;
+    min-height: 100vh;  /* Full height of the viewport */
+    background-color: #f5f5f5; /* Optional: light background for the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container specific to the form */
+  .form-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    /* Absolute positioning to use transform for centering */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Centering the container */
+  }
+  
+  /* Title (Login/Sign Up) */
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Input groups for email, password */
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+  }
+  
+  .input-group input:focus {
+    border-color: #5c6bc0; /* Color on focus */
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5c6bc0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #4f5b8b;
+  }
+  
+  /* Toggle between login and sign up */
+  .toggle {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .toggle span {
+    color: #666;
+  }
+  
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: #5c6bc0;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .toggle-btn:hover {
+    color: #4f5b8b;
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 30px;
+      width: 90%;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    .input-group input {
+      padding: 10px;
+    }
+  
+    .submit-btn {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .toggle-btn {
+      font-size: 12px;
+    }
+  }
+  
+
+
+  /* Ensure input fields are case-sensitive and take text as it is */
+input[type="email"],
+input[type="password"] {
+  text-transform: none; /* Disable automatic capitalization */
+}
+
+/* Optional: Customize further if you have specific styles for the form */
+.input-group input {
+  text-transform: none; /* Ensures all input fields have this behavior */
+}
